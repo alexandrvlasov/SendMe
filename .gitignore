@@ -2,3 +2,4 @@
 /config/
 /models/
 /user-data/
+.DS_Store

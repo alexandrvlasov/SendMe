@@ -6,11 +6,16 @@ const config = require('../config/app-config')
 
 router.get('/:userId', (req, res) => {
     const userId = req.params.userId // req.body.userid
-    const files = {}
+    var files = ['fiele','user']
+    var count = 0
 
     fs.readdir(config.dirName + '/' + userId, (err, files) => {
         files.forEach(file => {
-            files.append(file)
+            //file.
+            console.log(file)
+            files.push(file)
+            // files[count] = file
+            // count++
         })
     })
 

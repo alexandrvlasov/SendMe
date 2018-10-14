@@ -4,8 +4,11 @@ const router = express.Router();
 // Connect local files (Models, Controllers)
 const User = require('../models/User')
 
+// Connect middleware
+const checkAuth = require('../middleware/check-auth')
+
 // Routs
-router.post('/:userId', (req, res) => {
+router.post('/:userId', checkAuth, (req, res) => {
     User.find({ _id: req.params.userId }).exec().then(user => {
         if (user.length <= 0) {
             res.status(409).json({ message: 'User no have' })
@@ -13,7 +16,7 @@ router.post('/:userId', (req, res) => {
             res.status(200).json({ user: user })
         }
     })
-}).patch('/:userId', (req, res) => {
+}).patch('/:userId', checkAuth, (req, res) => {
     const userId = req.params.userId
 
     User.findById(userId).exec().then(user => {
