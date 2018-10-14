@@ -1,0 +1,19 @@
+{
+  "name": "send-me",
+  "version": "1.0.0",
+  "description": "SendMe Application RESTful API",
+  "main": "server.js",
+  "repository": "https://github.com/alexandrvlasov/SendMe.git",
+  "author": "Alexandr Korsia",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^3.0.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.3"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.1"
+  }
+}
