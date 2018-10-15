@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 
 // Require only routes
 const authRoute = require('./routes/auth')
-const accountRoute = require('./routes/account')
+const userRoute = require('./routes/user')
 const fileRoute = require('./routes/file')
 
 const config = require('./config/app-config')
@@ -21,8 +21,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(morgan('dev'))
 
 // Main routes
-app.use('/api/auth', authRoute)
-app.use('/api/user', accountRoute)
+app.use('/auth', authRoute)
+app.use('/api/user', userRoute)
 app.use('/api/file', fileRoute)
 
 app.get('/', (req, res) => {

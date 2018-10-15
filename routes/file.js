@@ -2,7 +2,11 @@ const express = require('express')
 const router = express.Router();
 const fs = require('fs')
 
+// Connect config file
 const config = require('../config/app-config')
+
+// Connect middleware
+const checkAuth = require('../middleware/check-auth')
 
 router.get('/:userId', (req, res) => {
     const userId = req.params.userId
