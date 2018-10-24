@@ -1,6 +1,5 @@
 node_modules/
 config/
-models/
 user-data/*
 .DS_Store
 app.yaml

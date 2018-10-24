@@ -18,8 +18,8 @@ router.get('/:userId', (req, res) => {
     })    
 })
 
-router.post('/add', (req, res) => {
-    
+router.post('/add', async (req, res) => {
+    let user = await User.findById()
 })
 
 module.exports = router
